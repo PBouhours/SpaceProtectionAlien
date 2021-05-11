@@ -64,7 +64,7 @@ export default function CharacterList({
   };
 
   return (
-    <div>
+    <>
       <div className='boxDropDown'>
         <button type='button' onClick={(e) => showAll()}>
           All
@@ -84,16 +84,10 @@ export default function CharacterList({
           </DropdownItem2>
         </Dropdown2>
       </div>
-      <div className="CharacterList">
-        {all &&
-          all.map(({ id, url }) => (
-            <CharacterItem url={url} id={id} />
-            /*<div className='gallery-card' key={id}>
-              <img src={url.image} alt='' className='gallery-img' />
-              <div> {url.name}</div>
-            </div>*/
-          ))}
+      <div className='CharacterList'>
+        {all && all.map(({ id, url }) => <CharacterItem url={url} id={id} />)}
+
       </div>
-    </div>
+    </>
   );
 }
