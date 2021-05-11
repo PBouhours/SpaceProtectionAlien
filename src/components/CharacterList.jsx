@@ -84,7 +84,7 @@ export default function CharacterList({
           </DropdownItem2>
         </Dropdown2>
       </div>
-      <div>
+      <div className="CharacterList">
         {all &&
           all.map(({ id, url }) => (
             <CharacterItem url={url} id={id} />

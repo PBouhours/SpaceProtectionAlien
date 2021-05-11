@@ -1,20 +1,7 @@
 import './CharacterDetails.css'
 
 function CharacterDetails(){
-  const array = 
-    {
-      id: 1,
-      name: 'C-T Baladur',
-      gender: 'M',
-      image:
-        'https://cdn.singulart.com/artworks/v2/cropped/7167/main/fhd/594333_5427bf5d0a329bde94dd4e2891712c57.jpeg',
-      species: 'Alien',
-      personality: 'Alcoolique',
-      description:
-        "Après avoir été le compagnon de C-3 PO, C-T Baladur a été abandonné aux abords de la ceinture d'orion, près de la station de kérosene dementélé ",
-      location: 'Bételgeuse',
-      age: '2061 ans',
-    }
+  
   
 
   return(
