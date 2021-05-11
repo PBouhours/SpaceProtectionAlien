@@ -1,0 +1,15 @@
+.dropdown-group {
+  display: none;
+}
+
+.dropdown-group.active {
+  display: initial;
+}
+.boxDropDown {
+  display: flex;
+
+  position: fixed;
+  width: 50%;
+  top: 0;
+  left: 0;
+}
