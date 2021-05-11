@@ -66,27 +66,32 @@ export default function CharacterList({
   return (
     <>
       <div className='boxDropDown'>
-        <button type='button' onClick={(e) => showAll()}>
-          All
-        </button>
-        <Dropdown>
-          <DropdownItem onClick={(e) => showFemme()}>Femme</DropdownItem>
-          <DropdownItem onClick={(e) => showHomme()}>Homme</DropdownItem>
-          <DropdownItem onClick={(e) => showAutre()}>Autre</DropdownItem>
-        </Dropdown>
-        <Dropdown2>
-          <DropdownItem2 onClick={(e) => showAlien()}>Alien</DropdownItem2>
-          <DropdownItem2 onClick={(e) => showHumanoide()}>
-            Humanoide
-          </DropdownItem2>
-          <DropdownItem2 onClick={(e) => showPredator()}>
-            Predator
-          </DropdownItem2>
-        </Dropdown2>
+        <div className='drop-group'>
+          <div className='btn-drop'>
+            <button type='button' onClick={(e) => showAll()}>
+              All
+            </button>
+          </div>
+          <div className='drop-container'>
+            <Dropdown>
+              <DropdownItem onClick={(e) => showFemme()}>Femme</DropdownItem>
+              <DropdownItem onClick={(e) => showHomme()}>Homme</DropdownItem>
+              <DropdownItem onClick={(e) => showAutre()}>Autre</DropdownItem>
+            </Dropdown>
+            <Dropdown2>
+              <DropdownItem2 onClick={(e) => showAlien()}>Alien</DropdownItem2>
+              <DropdownItem2 onClick={(e) => showHumanoide()}>
+                Humanoide
+              </DropdownItem2>
+              <DropdownItem2 onClick={(e) => showPredator()}>
+                Predator
+              </DropdownItem2>
+            </Dropdown2>
+          </div>
+        </div>
       </div>
       <div className='CharacterList'>
         {all && all.map(({ id, url }) => <CharacterItem url={url} id={id} />)}
-
       </div>
     </>
   );

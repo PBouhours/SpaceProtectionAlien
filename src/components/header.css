@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 10rem 5rem 10rem 5rem;
+  margin: 10rem 5rem 6rem 5rem;
 }
 .logo-banner {
   height: 300px;
@@ -30,4 +30,10 @@
 .title-desc {
   font-size: 2.2rem;
   color: #ffc300;
+}
+hr {
+  height: 1px;
+  border: none;
+  background-color: #ffc300;
+  margin-bottom: 60px;
 }
