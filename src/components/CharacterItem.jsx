@@ -1,14 +1,14 @@
 import './CharacterItem.css';
 
-function CharacterItem({ name, image, age }) {
+function CharacterItem({ id, url }) {
   return (
-    <div className='CharacterItem'>
+    <div className='CharacterItem' id={id}>
       <div className='info-character'>
-        <h2>{name}</h2>
-        <p>{age}</p>
+        <h2>{url.name}</h2>
+        <p>{url.description}</p>
       </div>
       <div className='img-character'>
-        <img src={image} alt={name} className='img-card-list' />
+        <img src={url.image} alt={url.name} className='img-card-list' />
       </div>
       <button type='button'>Adoptez-le !</button>
     </div>

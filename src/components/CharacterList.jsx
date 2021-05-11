@@ -1,75 +1,99 @@
 import CharacterItem from './CharacterItem';
+import React, { useEffect } from 'react';
+
+import Dropdown from './Dropdown';
+import DropdownItem from './DropdownItem';
+import Dropdown2 from './Dropdown2';
+import DropdownItem2 from './DropdownItem2';
 import './CharacterList.css';
 
-function CharacterList() {
-  const array = [
-    {
-      id: 1,
-      name: 'C-T Baladur',
-      gender: 'M',
-      image:
-        'https://cdn.singulart.com/artworks/v2/cropped/7167/main/fhd/594333_5427bf5d0a329bde94dd4e2891712c57.jpeg',
-      species: 'Alien',
-      personality: '',
-      description:
-        "Après avoir été le compagnon de C-3 PO, C-T Baladur a été abandonné aux abords de la ceinture d'orion, près de la station de kérosene dementélé ",
-      location: 'Bételgeuse',
-      age: '2061 ans',
-    },
-    {
-      id: 2,
-      name: 'Massat aka Le pilon ',
-      gender: 'M',
-      image:
-        'https://cdn.singulart.com/artworks/v2/cropped/7167/main/fhd/594333_5427bf5d0a329bde94dd4e2891712c57.jpeg',
-      species: 'Alien',
-      personality: '',
-      description:
-        "Massat est un de nos rare compagnon a ne pas avoir été abandonné, en sortie de soiréé, il s'est perdu en sorant de Kepler-1649 b ",
-      location: 'Kepler-1649 b sortie WD40',
-      age: '+/- 12 ans',
-    },
-  ];
-  return (
-    <div className='CharacterList'>
-      <CharacterItem
-        key={array[0].id}
-        image={array[0].image}
-        name={array[0].name}
-        age={array[0].age}
-      />
-      <CharacterItem
-        key={array[1].id}
-        image={array[1].image}
-        name={array[1].name}
-        age={array[1].age}
-      />
-      <CharacterItem
-        key={array[0].id}
-        image={array[0].image}
-        name={array[0].name}
-        age={array[0].age}
-      />
+export default function CharacterList({
+  imageUrl,
+  setImageUrl,
+  getImageUrl,
+  all,
+  setAll,
+}) {
+  useEffect(() => {
+    getImageUrl();
+    setAll(imageUrl);
+    console.log(imageUrl);
+    console.log(all);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-      <CharacterItem
-        key={array[0].id}
-        image={array[0].image}
-        name={array[0].name}
-        age={array[0].age}
-      />
-      <CharacterItem
-        key={array[1].id}
-        image={array[1].image}
-        name={array[1].name}
-        age={array[1].age}
-      />
-      <CharacterItem
-        key={array[0].id}
-        image={array[0].image}
-        name={array[0].name}
-        age={array[0].age}
-      />
+  const allAlien = imageUrl.filter((valeur) => valeur.url);
+  const filteredSexeHomme = imageUrl.filter(
+    (valeur) => valeur.url.gender === 'M'
+  );
+  const filteredSexeFemme = imageUrl.filter(
+    (valeur) => valeur.url.gender === 'F'
+  );
+  const filteredSexeAutre = imageUrl.filter(
+    (valeur) => valeur.url.gender === 'Autre'
+  );
+  const filteredAlien = imageUrl.filter(
+    (valeur) => valeur.url.species === 'Alien'
+  );
+  const filteredPredator = imageUrl.filter(
+    (valeur) => valeur.url.species === 'Predator'
+  );
+  const filteredHumanoide = imageUrl.filter(
+    (valeur) => valeur.url.species === 'Humanoide'
+  );
+  const showAll = () => {
+    setAll(allAlien);
+  };
+  const showHomme = () => {
+    setAll(filteredSexeHomme);
+  };
+  const showFemme = () => {
+    setAll(filteredSexeFemme);
+  };
+  const showAutre = () => {
+    setAll(filteredSexeAutre);
+  };
+  const showAlien = () => {
+    setAll(filteredAlien);
+  };
+  const showPredator = () => {
+    setAll(filteredPredator);
+  };
+  const showHumanoide = () => {
+    setAll(filteredHumanoide);
+  };
+
+  return (
+    <div>
+      <div className='boxDropDown'>
+        <button type='button' onClick={(e) => showAll()}>
+          All
+        </button>
+        <Dropdown>
+          <DropdownItem onClick={(e) => showFemme()}>Femme</DropdownItem>
+          <DropdownItem onClick={(e) => showHomme()}>Homme</DropdownItem>
+          <DropdownItem onClick={(e) => showAutre()}>Autre</DropdownItem>
+        </Dropdown>
+        <Dropdown2>
+          <DropdownItem2 onClick={(e) => showAlien()}>Alien</DropdownItem2>
+          <DropdownItem2 onClick={(e) => showHumanoide()}>
+            Humanoide
+          </DropdownItem2>
+          <DropdownItem2 onClick={(e) => showPredator()}>
+            Predator
+          </DropdownItem2>
+        </Dropdown2>
+      </div>
+      <div>
+        {all &&
+          all.map(({ id, url }) => (
+            <CharacterItem url={url} id={id} />
+            /*<div className='gallery-card' key={id}>
+              <img src={url.image} alt='' className='gallery-img' />
+              <div> {url.name}</div>
+            </div>*/
+          ))}
+      </div>
     </div>
   );
 }
-export default CharacterList;
