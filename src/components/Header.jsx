@@ -1,5 +1,5 @@
 import logo from './logo/logo.png';
-import banner from './banner.jpg';
+//import banner from './banner.jpg';
 import './header.css';
 
 const Header = () => {
@@ -11,8 +11,7 @@ const Header = () => {
       </div>
       <div className='title-container'>
         <h2 className='title2'>
-          Bienvenue à l'intergalactique SPA ! Adoptez votre nouvel Alien, Robot
-          ou tout autre espèce...
+          Bienvenue à l'intergalactique SPA ! Adoptez votre nouvel Alien ou tout autre espèce...
         </h2>
       </div>
       <div className='header-banner'></div>
