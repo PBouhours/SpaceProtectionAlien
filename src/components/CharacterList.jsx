@@ -1,5 +1,5 @@
 import CharacterItem from './CharacterItem';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import Dropdown from './Dropdown';
 import DropdownItem from './DropdownItem';
@@ -19,6 +19,7 @@ export default function CharacterList({
     setAll(imageUrl);
     console.log(imageUrl);
     console.log(all);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const allAlien = imageUrl.filter((valeur) => valeur.url);
