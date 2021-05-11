@@ -7,6 +7,7 @@ import Dropdown2 from './Dropdown2';
 import DropdownItem2 from './DropdownItem2';
 import './CharacterList.css';
 
+
 export default function CharacterList({
   imageUrl,
   setImageUrl,
