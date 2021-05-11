@@ -11,7 +11,7 @@ import {
 
 function CharacterDetails(props){
   const [character, setCharacter] = useState({});
-  const [imageUrl, setImageUrl] = useState({});
+  // const [imageUrl, setImageUrl] = useState({});
 
   const id = props.match.params.id
   console.log(id)
@@ -22,17 +22,12 @@ function CharacterDetails(props){
 
     imageRef.on('value', async (snapshot) => {
       const imageUrls = await snapshot.val();
-      setCharacter(imageUrls)
-
-     // setImageUrl(urls);
-     // setCharacter(urls);
+      setCharacter(imageUrls)   
       console.log(imageUrls);
     });
   };
   useEffect(() => {
     getImageUrl();
-    ;
-    console.log(imageUrl);
   }, []);
   
   
