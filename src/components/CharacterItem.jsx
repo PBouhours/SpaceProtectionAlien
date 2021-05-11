@@ -1,6 +1,9 @@
 import './CharacterItem.css';
+import{ Link } from "react-router-dom";
 
-function CharacterItem({ id, url }) {
+function CharacterItem({url, id}) {
+  
+
   return (
     <div className='CharacterItem' id={id}>
       <div className='info-character'>
@@ -10,7 +13,7 @@ function CharacterItem({ id, url }) {
       <div className='img-character'>
         <img src={url.image} alt={url.name} className='img-card-list' />
       </div>
-      <button type='button'>Adoptez-le !</button>
+      <Link to={`/characters/${id}`}><button type='button'>Adoptez-le !</button></Link>
     </div>
   );
 }
