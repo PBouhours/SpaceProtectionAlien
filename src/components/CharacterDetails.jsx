@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 
 function CharacterDetails(props){
+  const [active, setActive] = useState('')
   const [character, setCharacter] = useState({});
   // const [imageUrl, setImageUrl] = useState({});
 
@@ -47,7 +48,9 @@ function CharacterDetails(props){
           <img src={character.image} alt={character.name} />
         </div>
       </div>
-      <Link to='/'>Retour</Link>      
+      <Link to='/'>Retour</Link>
+      <button type="button" onClick={()=> setActive('active')}>Validé l'adoption</button>
+      <div className={active}></div>     
     </div>
   )
 }

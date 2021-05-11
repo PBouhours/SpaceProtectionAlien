@@ -6,13 +6,7 @@ import DropdownItem from './DropdownItem';
 import Dropdown2 from './Dropdown2';
 import DropdownItem2 from './DropdownItem2';
 import './CharacterList.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import CharacterDetails from './CharacterDetails';
+
 
 export default function CharacterList({
   imageUrl,
