@@ -1,10 +1,10 @@
-function CharacterItem({name, image, age}){
-  return(
-    <div className="CharacterItem">
-      <img src={image} alt={name} />
-      <h2>{name}</h2>
-      <h3>{age}</h3>
+function CharacterItem({ id, url }) {
+  return (
+    <div className='CharacterItem' id={id}>
+      <img src={url.image} alt='' />
+      <h2>{url.name}</h2>
+      <h3>{url.description}</h3>
     </div>
-  )
+  );
 }
 export default CharacterItem;
