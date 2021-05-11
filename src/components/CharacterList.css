@@ -1,0 +1,7 @@
+.CharacterList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin: 0 3rem;
+}

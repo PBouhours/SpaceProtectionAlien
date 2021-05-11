@@ -1,12 +1,12 @@
 import './App.css';
 import Header from './components/Header';
-// import CharacterList from './components/CharacterList';
+import CharacterList from './components/CharacterList';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      {/* <CharacterList /> */}
+      <CharacterList />
     </div>
   );
 }

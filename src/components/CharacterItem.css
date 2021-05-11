@@ -1,0 +1,53 @@
+.CharacterItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(31, 41, 55);
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 4px 1px,
+    rgb(255, 255, 255, 0.2) 0px 0px 2px 1px;
+}
+
+.info-character {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+
+.info-character h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+  color: rgb(162, 230, 53);
+}
+
+.info-character p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+
+  color: rgb(163, 230, 53);
+}
+
+.img-character {
+  margin: 0 auto;
+}
+.img-card-list {
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.CharacterItem button {
+  padding: 1rem;
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: rgb(163, 230, 53);
+  background-color: rgb(31, 41, 55);
+  border: 1px solid rgb(163, 230, 53);
+}

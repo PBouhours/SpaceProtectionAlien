@@ -12,10 +12,10 @@ const Header = () => {
           <img src={logo} alt='logo' className='logo-banner' />
         </div>
         <div className='title-container'>
-          <h2 className='title2'>
-            Bienvenue à l'intergalactique SPA ! Adoptez votre nouvel Alien,
-            Robot ou tout autre espèce...
-          </h2>
+          <h2 className='title2'>Bienvenue à l'intergalactique SPA !</h2>
+          <p className='title-desc'>
+            Adoptez votre nouvel Alien, Robot ou tout autre espèce...
+          </p>
         </div>
       </div>
     </div>
