@@ -6,13 +6,6 @@ import DropdownItem from './DropdownItem';
 import Dropdown2 from './Dropdown2';
 import DropdownItem2 from './DropdownItem2';
 import './CharacterList.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import CharacterDetails from './CharacterDetails';
 
 export default function CharacterList({
   imageUrl,
@@ -72,6 +65,9 @@ export default function CharacterList({
 
   return (
     <>
+      <h3 className='title-list'>
+        Découvrez nos spécimens prêts à l'adoption, à vous de choisir !
+      </h3>
       <div className='boxDropDown'>
         <div className='drop-group'>
           <div className='btn-drop'>
