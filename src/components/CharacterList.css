@@ -11,12 +11,51 @@
 
 .dropdown-group.active {
   display: initial;
+  text-align: center;
+}
+.dropdown-item {
+  border: none;
+  cursor: pointer;
+  color: rgb(163, 230, 53);
+  background-color: rgb(31, 41, 55);
+  padding: 0.4rem;
 }
 .boxDropDown {
+  position: relative;
   display: flex;
-
-  position: fixed;
-  width: 50%;
-  top: 0;
-  left: 0;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
+  margin: 0 auto;
+}
+.drop-group {
+  display: flex;
+}
+.drop-container {
+  display: flex;
+}
+.btn-drop button {
+  padding: 0.5rem 1.2rem;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: rgb(163, 230, 53);
+  background-color: rgb(31, 41, 55);
+  border: 1px solid rgb(163, 230, 53);
+}
+.Dropdown1 {
+  margin-right: 1rem;
+}
+.Dropdown1 button,
+.Dropdown2 button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: rgb(163, 230, 53);
+  background-color: rgb(31, 41, 55);
+  border: 1px solid rgb(163, 230, 53);
 }
