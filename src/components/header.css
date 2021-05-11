@@ -13,18 +13,15 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 5rem auto 10rem auto;
+  margin: 10rem 5rem 6rem 5rem;
 }
-/* .logo-container {
-  width: 50%;
-} */
 .logo-banner {
   height: 300px;
 }
-/* .title-container h2,
-p {
-  width: 150px;
-} */
+.logo-container,
+.title-container {
+  margin-left: 5rem;
+}
 .title2 {
   font-size: 2.8rem;
   color: #ffc300;
@@ -33,4 +30,10 @@ p {
 .title-desc {
   font-size: 2.2rem;
   color: #ffc300;
+}
+hr {
+  height: 1px;
+  border: none;
+  background-color: #ffc300;
+  margin-bottom: 60px;
 }

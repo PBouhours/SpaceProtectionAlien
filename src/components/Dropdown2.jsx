@@ -4,7 +4,7 @@ function Dropdown2(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='Dropdown'>
+    <div className='Dropdown2'>
       <button
         onClick={(e) => {
           setIsOpen(!isOpen);
