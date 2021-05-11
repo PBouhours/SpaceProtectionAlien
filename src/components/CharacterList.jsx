@@ -86,6 +86,7 @@ export default function CharacterList({
       </div>
       <div className='CharacterList'>
         {all && all.map(({ id, url }) => <CharacterItem url={url} id={id} />)}
+
       </div>
     </>
   );

@@ -1,0 +1,21 @@
+.CharacterDetails{
+  margin: auto;
+  max-width: 80%;
+  background-color: #001D3D;
+  color:#FFC300;
+}
+
+.body{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.info{
+  width: 40%;
+}
+.Photo{
+ width: 40%;
+}
+.Photo img{
+width: 100%;
+}
