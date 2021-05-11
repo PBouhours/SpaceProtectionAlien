@@ -23,7 +23,7 @@
 .title-container {
   height: 600px;
   position: relative;
-  background: no-repeat center center / cover url(/src/data/photo/banner.jpg);
+  background: no-repeat center center / cover url(/src/components/banner.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
