@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DropdownItem from './DropdownItem';
 
 function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);

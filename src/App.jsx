@@ -26,6 +26,7 @@ function App() {
     getImageUrl();
     setAll(imageUrl);
     console.log(imageUrl);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className='App'>
