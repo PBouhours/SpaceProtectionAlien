@@ -25,26 +25,44 @@ function CharacterDetails(props) {
 
   return (
     <div className='CharacterDetails'>
-      <h1>{character.name}</h1>
+      <h2 className='title-card'>{character.name}</h2>
       <div className='body'>
         <div className='info'>
-          <h3>espèce: {character.species}</h3>
-          <h3>
-            Sexe: {character.gender} age: {character.age}
-          </h3>
-          <h3>personnalité: {character.personality}</h3>
-          <h3>localisation: {character.location} </h3>
-          <h3>Description:</h3>
-          <p>{character.description}</p>
+          <div className='content-info'>
+            <h3>Espèce :</h3>
+            <p>{character.species}</p>
+          </div>
+          <div className='content-info'>
+            <h3>Sexe :</h3>
+            <p>{character.gender}</p>
+          </div>
+          <div className='content-info'>
+            <h3>Age :</h3>
+            <p>{character.age}</p>
+          </div>
+          <div className='content-info1'>
+            <h3>Personnalité :</h3>
+            <p>{character.personality}</p>
+          </div>
+          <div className='content-info1'>
+            <h3>Localisation :</h3>
+            <p>{character.location}</p>
+          </div>
+          <div className='content-info1'>
+            <h3>Description:</h3>
+            <p>{character.description}</p>
+          </div>
         </div>
         <div className='Photo'>
           <img src={character.image} alt={character.name} />
         </div>
       </div>
-      <Link to='/'>Retour</Link>
-      <button type='button' onClick={() => setActive('active')}>
-        Valider l'adoption
-      </button>
+      <div className='link-btn'>
+        <Link to='/'>Retour</Link>
+        <button type='button' onClick={() => setActive('active')}>
+          Valider l'adoption
+        </button>
+      </div>
       <div className={`formulaire ${active}`}>
         <form className='ContactForm'>
           <input type='text' className='name' placeholder='Nom' />

@@ -7,7 +7,6 @@ import Dropdown2 from './Dropdown2';
 import DropdownItem2 from './DropdownItem2';
 import './CharacterList.css';
 
-
 export default function CharacterList({
   imageUrl,
   setImageUrl,
@@ -67,7 +66,7 @@ export default function CharacterList({
   return (
     <>
       <h3 className='title-list'>
-        Découvrez nos spécimens prêts à l'adoption, à vous de choisir !
+        Adoptez votre nouvel Alien ou tout autre espèce...
       </h3>
       <div className='boxDropDown'>
         <div className='drop-group'>
