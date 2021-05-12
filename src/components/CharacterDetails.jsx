@@ -59,7 +59,7 @@ function CharacterDetails(props) {
       </div>
       <div className='link-btn'>
         <Link to='/'>Retour</Link>
-        <button type='button' onClick={() => setActive('active')}>
+        <button className='activation' type='button' onClick={() => setActive('active')}>
           Valider l'adoption
         </button>
       </div>
