@@ -29,10 +29,7 @@ const Header = () => {
             src={Video}
           ></video>
         </div>
-        <h2 className='title2'>
-          Bienvenue à l'intergalactique SPA ! Adoptez votre nouvel Alien ou tout
-          autre espèce...
-        </h2>
+        <h2 className='title2'>Bienvenue à l'intergalactique SPA !</h2>
       </div>
       <div className='header-banner'></div>
     </div>

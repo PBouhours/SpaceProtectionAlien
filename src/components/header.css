@@ -29,14 +29,17 @@
   align-items: center;
 }
 .title2 {
-  font-size: 55px;
+  font-size: 45px;
   position: absolute;
-  top: 50%;
+  top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 100%;
   text-align: center;
   color: #ffc300;
+  padding: 20px 0;
+  background-color: #001d3d;
+  line-height: normal;
 }
 .video {
   width: 100%;
