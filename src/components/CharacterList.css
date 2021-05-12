@@ -2,7 +2,7 @@
   text-align: center;
   font-size: 1.7rem;
   margin-top: 100px;
-  color: #001d3d;
+  color: #fff1e6;
 }
 .CharacterList {
   display: flex;
@@ -22,8 +22,8 @@
 .dropdown-item {
   border: none;
   cursor: pointer;
-  color: rgb(163, 230, 53);
-  background-color: #013a63;
+  color: #001d3d;
+  background-color: #fff1e6;
   padding: 0.4rem;
 }
 .boxDropDown {
@@ -47,9 +47,9 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  color: rgb(163, 230, 53);
-  background-color: #013a63;
-  border: 1px solid rgb(163, 230, 53);
+  color: #001d3d;
+  background-color: #fff1e6;
+  border: 1px solid #001d3d;
 }
 .Dropdown1 {
   margin-right: 1rem;
@@ -61,7 +61,7 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  color: rgb(163, 230, 53);
-  background-color: #013a63;
-  border: 1px solid rgb(163, 230, 53);
+  color: #001d3d;
+  background-color: #fff1e6;
+  border: 1px solid #001d3d;
 }

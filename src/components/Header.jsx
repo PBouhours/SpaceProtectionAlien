@@ -20,6 +20,7 @@ const Header = () => {
         </div>
       </div>
       <div className='title-container'>
+<<<<<<< HEAD
         <div>
           <video
             class='video'
@@ -33,6 +34,9 @@ const Header = () => {
           Bienvenue à l'intergalactique SPA ! Adoptez votre nouvel Alien ou tout
           autre espèce...
         </h2>
+=======
+        <h2 className='title2'>Bienvenue à l'intergalactique SPA !</h2>
+>>>>>>> 01c90dca89c9bad3ef99b3170a17bc2a40ba5646
       </div>
       <div className='header-banner'></div>
     </div>

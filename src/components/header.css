@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background-color: #cce3de;
+  background-color: #001d3d;
   height: 100px;
 }
 .logo-banner {
@@ -16,7 +16,7 @@
   font-size: 3rem;
   font-weight: 600;
   padding: 2rem 0;
-  color: #001d3d;
+  color: #ffc300;
   text-align: center;
 }
 
@@ -29,14 +29,14 @@
   align-items: center;
 }
 .title2 {
-  font-size: 45px;
+  font-size: 55px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
-  color: #e9d8a6;
+  color: #ffc300;
 }
 .video {
   width: 100%;
