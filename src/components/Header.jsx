@@ -10,14 +10,12 @@ const Header = () => {
       <div className='navbar'>
         <img src={logo} alt='logo' className='logo-banner' />
         <h1 className='title1'>Space Protection of Alien</h1>
-        <div>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/propose'>Proposez votre alien</Link>
-          </li>
-        </div>
+      </div>
+
+      <div className='linkbtn'>
+        <Link to='/'>Home</Link>
+
+        <Link to='/propose'>Proposez votre alien</Link>
       </div>
       <div className='title-container'>
         <div>
