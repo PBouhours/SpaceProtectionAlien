@@ -56,6 +56,11 @@ function CharacterDetails(props) {
         <div className='Photo'>
           <img src={character.image} alt={character.name} />
         </div>
+        <Link to='/'>Retour</Link>
+        <button type='button' onClick={() => setActive('active')}>
+          Validé l'adoption
+        </button>
+        <div className={active}></div>
       </div>
       <div className='link-btn'>
         <Link to='/'>Retour</Link>
