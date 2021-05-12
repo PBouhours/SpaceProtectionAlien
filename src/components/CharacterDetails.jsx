@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './CharacterDetails.css';
 import firebase from './firebaseConfig';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function CharacterDetails(props) {
   const [active, setActive] = useState('');
@@ -24,6 +25,8 @@ function CharacterDetails(props) {
   }, []);
 
   return (
+    <>
+    <Header />
     <div className='CharacterDetails'>
       <h2 className='title-card'>{character.name}</h2>
       <div className='body'>
@@ -56,15 +59,11 @@ function CharacterDetails(props) {
         <div className='Photo'>
           <img src={character.image} alt={character.name} />
         </div>
-        <Link to='/'>Retour</Link>
-        <button type='button' onClick={() => setActive('active')}>
-          Validé l'adoption
-        </button>
         <div className={active}></div>
       </div>
       <div className='link-btn'>
         <Link to='/'>Retour</Link>
-        <button type='button' onClick={() => setActive('active')}>
+        <button className='activation' type='button' onClick={() => setActive('active')}>
           Valider l'adoption
         </button>
       </div>
@@ -73,10 +72,14 @@ function CharacterDetails(props) {
           <input type='text' className='name' placeholder='Nom' />
           <input type='text' className='prenom' placeholder='Prénom' />
           <input type='mail' className='email' placeholder='Email' />
-          <button type='button'>Je veux cet Alien </button>
+            <div className='btn'>
+            <button className='retour' type='button'onClick={()=> setActive('')}>retour</button>
+            <button className='valide' type='button'>Je veux cet Alien </button>
+            </div>
         </form>
       </div>
     </div>
+    </>
   );
 }
 export default CharacterDetails;
