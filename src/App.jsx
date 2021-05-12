@@ -3,15 +3,7 @@ import Header from './components/Header';
 import firebase from './components/firebaseConfig';
 import React, { useState, useEffect } from 'react';
 import CharacterList from './components/CharacterList';
-<<<<<<< HEAD
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-=======
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route 
-} from "react-router-dom";
->>>>>>> 43fed56eb2854aded193af8fe90146c5a6315546
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CharacterDetails from './components/CharacterDetails';
 import Propose from './components/Propose';
 

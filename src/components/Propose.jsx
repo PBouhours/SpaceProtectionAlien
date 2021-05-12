@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 import Resizer from 'react-image-file-resizer';
 import firebase from './firebaseConfig';
 import './Propose.css';
+
 function Propose() {
   const [imageUrl, setImageUrl] = useState([]);
   const [text, setText] = useState('');
@@ -71,6 +72,7 @@ function Propose() {
   };
   useEffect(() => {
     getImageUrl();
+    console.log(imageUrl);
   }, []);
 
   const myChangeHandler = (event) => {
@@ -87,7 +89,7 @@ function Propose() {
   };
 
   return (
-    <div>
+    <div className='boxAnnonce'>
       <form className='boxGallery'>
         <h2 className='textHead'>Postez votre annonce</h2>
 
@@ -127,6 +129,40 @@ function Propose() {
               </button>
             </div>
           </div>
+        </div>
+        <div className='boxCardAnnonce'>
+          {imageUrl
+            ? imageUrl
+                .sort((a, b) => a.url.time - b.url.time)
+                .reverse()
+                .map(({ id, url }) => (
+                  <div>
+                    <div className='gallery-card' key={id}>
+                      <img src={url.image} alt='' className='gallery-img' />
+                      <div className='gallery-card-description'>
+                        <p className='gallery-card-description-text'>
+                          &quot;{url.name}&quot;
+                        </p>
+                        <p className='gallery-card-description-name'>
+                          {url.age}
+                        </p>
+                        <p className='gallery-card-description-name'>
+                          {url.description}
+                        </p>
+                        <p
+                          style={{
+                            textAlign: 'right',
+                            fontSize: '10px',
+                            marginRight: '10px',
+                          }}
+                        >
+                          {url.date}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))
+            : ''}
         </div>
       </form>
     </div>
