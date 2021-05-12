@@ -66,6 +66,9 @@ export default function CharacterList({
 
   return (
     <>
+      <h3 className='title-list'>
+        Découvrez nos spécimens prêts à l'adoption, à vous de choisir !
+      </h3>
       <div className='boxDropDown'>
         <div className='drop-group'>
           <div className='btn-drop'>
