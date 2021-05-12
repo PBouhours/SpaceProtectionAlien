@@ -73,8 +73,8 @@ function CharacterDetails(props) {
           <input type='text' className='prenom' placeholder='Prénom' />
           <input type='mail' className='email' placeholder='Email' />
             <div className='btn'>
-            <button className='retour' type='button'onClick={()=> setActive('')}>retour</button>
-            <button className='valide' type='button'>Je veux cet Alien </button>
+            <button className='retour' type='button'onClick={()=> setActive('')}>Je veux cet Alien</button>
+            
             </div>
         </form>
       </div>
