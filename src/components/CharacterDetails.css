@@ -1,36 +1,71 @@
-.CharacterDetails{
+.CharacterDetails {
   position: relative;
-  margin: auto;
+  margin: 3rem auto;
   max-width: 80%;
-  background-color: #001D3D;
-  color:#FFC300;
+  background-color: #001d3d;
+  color: #ffc300;
+  border: 1px solid #ffc300;
+  border-radius: 5px;
 }
 
-.body{
+.title-card {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem 0 3rem 0;
+}
+.body {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.info{
+.info {
   width: 40%;
 }
-.Photo{
- width: 40%;
+.info h3 {
+  font-size: 20px;
 }
-.Photo img{
-width: 100%;
+.info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
-
-.formulaire{
+.content-info {
+  display: flex;
+  align-items: baseline;
+}
+.content-info1 {
+  display: flex;
+  flex-direction: column;
+}
+.Photo {
+  width: 40%;
+}
+.Photo img {
+  width: 100%;
+}
+.link-btn {
+  text-align: center;
+  margin: 2rem 0;
+}
+.link-btn a {
+  margin-right: 1rem;
+  color: #ffc300;
+  text-decoration: none;
+}
+.link-btn button {
+  margin-left: 1rem;
+}
+.formulaire {
   display: none;
   padding: 40px;
   background-color: aliceblue;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
 }
-.ContactForm{
+.ContactForm {
   display: flex;
   flex-direction: column; 
 }
@@ -41,7 +76,7 @@ width: 100%;
   border: 1px solid rgb(163, 230, 53);
   border-radius: 5px;
 }
-.active{
+.active {
   display: block;
 }
 .ContactForm .valide{
