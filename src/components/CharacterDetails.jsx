@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './CharacterDetails.css';
 import firebase from './firebaseConfig';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function CharacterDetails(props) {
   const [active, setActive] = useState('');
@@ -24,6 +25,8 @@ function CharacterDetails(props) {
   }, []);
 
   return (
+    <>
+    <Header />
     <div className='CharacterDetails'>
       <h2 className='title-card'>{character.name}</h2>
       <div className='body'>
@@ -56,10 +59,6 @@ function CharacterDetails(props) {
         <div className='Photo'>
           <img src={character.image} alt={character.name} />
         </div>
-        <Link to='/'>Retour</Link>
-        <button type='button' onClick={() => setActive('active')}>
-          Validé l'adoption
-        </button>
         <div className={active}></div>
       </div>
       <div className='link-btn'>
@@ -80,6 +79,7 @@ function CharacterDetails(props) {
         </form>
       </div>
     </div>
+    </>
   );
 }
 export default CharacterDetails;
