@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 import Resizer from 'react-image-file-resizer';
 import firebase from './firebaseConfig';
 import './Propose.css';
+import { Link } from 'react-router-dom';
 
 function Propose() {
   const [imageUrl, setImageUrl] = useState([]);
@@ -91,31 +92,30 @@ function Propose() {
   return (
     <div className='boxAnnonce'>
       <form className='boxGallery'>
-        <h2 className='textHead'>Postez votre annonce</h2>
-
         <div className='form-gallery'>
+          <h2 className='textHead'>Postez votre annonce</h2>
           <div className='form-gallery-content'>
-            <h2 className='title-gallery'>Photo de votre trouvaille : </h2>
-            <input
-              className='gallery-input'
-              type='text'
-              placeholder='Nom'
-              onChange={myChangeHandler}
-            />
+            <div className='input'>
+              <input
+                className='gallery-input'
+                type='text'
+                placeholder='Nom'
+                onChange={myChangeHandler}
+              />
 
-            <input
-              className='gallery-input'
-              type='text'
-              placeholder='Age'
-              onChange={myChangeHandlerAge}
-            />
-            <input
-              className='gallery-input'
-              type='text'
-              placeholder='Description'
-              onChange={myChangeHandlerDescription}
-            />
-
+              <input
+                className='gallery-input'
+                type='text'
+                placeholder='Age'
+                onChange={myChangeHandlerAge}
+              />
+              <input
+                className='gallery-input'
+                type='text'
+                placeholder='Description'
+                onChange={myChangeHandlerDescription}
+              />
+            </div>
             <div>
               <input
                 name='files'
@@ -136,29 +136,23 @@ function Propose() {
                 .sort((a, b) => a.url.time - b.url.time)
                 .reverse()
                 .map(({ id, url }) => (
-                  <div>
-                    <div className='gallery-card' key={id}>
-                      <img src={url.image} alt='' className='gallery-img' />
-                      <div className='gallery-card-description'>
-                        <p className='gallery-card-description-text'>
-                          &quot;{url.name}&quot;
-                        </p>
-                        <p className='gallery-card-description-name'>
-                          {url.age}
-                        </p>
-                        <p className='gallery-card-description-name'>
-                          {url.description}
-                        </p>
-                        <p
-                          style={{
-                            textAlign: 'right',
-                            fontSize: '10px',
-                            marginRight: '10px',
-                          }}
-                        >
-                          {url.date}
-                        </p>
+                  <div className='gallery-card' key={id}>
+                    <div className='CharacterItem' id={id}>
+                      <div className='info-character'>
+                        <h2>{url.name}</h2>
+                        <p>age: {url.age}</p>
+                        <p> description : {url.description} </p>
                       </div>
+                      <div className='img-character'>
+                        <img
+                          src={url.image}
+                          alt={url.name}
+                          className='img-card-list'
+                        />
+                      </div>
+                      <Link to={`/characters/${id}`}>
+                        <button type='button'>Adoptez-le !</button>
+                      </Link>
                     </div>
                   </div>
                 ))

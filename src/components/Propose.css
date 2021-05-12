@@ -5,6 +5,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 35px;
+}
+.textHead {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+}
+.form-gallery {
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.form-gallery-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 .boxAnnonce {
   padding: 15px;
@@ -18,4 +36,92 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 35px;
+
+  flex-wrap: wrap;
+}
+.gallery-card {
+  margin: 0 24px 40px 24px;
+  background-color: rgb(248 241 228 / 15%);
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  position: relative;
+}
+.gallery-img {
+  height: 300px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+button {
+  padding: 1rem;
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #fff1e6;
+  background-color: #001d3d;
+  border: 1px solid #fff1e6;
+}
+.gallery-card-description {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.gallery-card-description-text {
+  font-style: 16px;
+  margin-bottom: 7px;
+}
+.CharacterItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff1e6;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 4px 1px,
+    rgb(255, 255, 255, 0.2) 0px 0px 2px 1px;
+}
+.CharacterItem a {
+  text-align: center;
+}
+
+.info-character {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 58px;
+}
+
+.info-character h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+  color: #001d3d;
+}
+
+.info-character p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem 20px;
+  color: #001d3d;
+  white-space: normal;
+}
+
+.img-character {
+  margin: 0 auto;
+}
+.img-card-list {
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.gallery-input {
+  border-radius: 50px;
+  margin-right: 20px;
+}
+.input {
+  margin: 30px;
 }
