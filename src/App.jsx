@@ -3,13 +3,9 @@ import Header from './components/Header';
 import firebase from './components/firebaseConfig';
 import React, { useState, useEffect } from 'react';
 import CharacterList from './components/CharacterList';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import CharacterDetails from './components/CharacterDetails';
+import Propose from './components/Propose';
 
 function App() {
   const [imageUrl, setImageUrl] = useState([]);
@@ -36,19 +32,24 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <Header />
       <Router>
         <Switch>
-          <Route exact path="/">
-          <CharacterList
-            getImageUrl={getImageUrl}
-            all={all}
-            setAll={setAll}
-            imageUrl={imageUrl}
-            setImageUrl={setImageUrl}
-          />
+          <Route exact path='/'>
+            <Header />
+            <CharacterList
+              getImageUrl={getImageUrl}
+              all={all}
+              setAll={setAll}
+              imageUrl={imageUrl}
+              setImageUrl={setImageUrl}
+            />
           </Route>
-          <Route exact path="/characters/:id" component={CharacterDetails} />
+          <Route exact path='/propose'>
+            <Header />
+            <Propose />
+          </Route>
+
+          <Route exact path='/characters/:id' component={CharacterDetails} />
         </Switch>
       </Router>
     </div>
