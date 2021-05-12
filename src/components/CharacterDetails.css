@@ -4,7 +4,7 @@
   max-width: 80%;
   background-color: #001d3d;
   color: #ffc300;
-  border: 1px solid #ffc300;
+  border: 1px solid rgb(163, 230, 53);
   border-radius: 5px;
 }
 
@@ -58,7 +58,7 @@
 }
 .formulaire {
   display: none;
-  padding: 150px;
+  padding: 40px;
   background-color: aliceblue;
   position: absolute;
   top: 50%;
@@ -67,8 +67,43 @@
 }
 .ContactForm {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+}
+.ContactForm input{
+  margin-bottom: 10px;
+  background-color: #013a63;
+  color: rgb(163, 230, 53);
+  border: 1px solid rgb(163, 230, 53);
+  border-radius: 5px;
 }
 .active {
   display: block;
+}
+.ContactForm .valide{
+  width: 100px; 
+  background-color: #013a63;
+  color: rgb(163, 230, 53);
+  border: 1px solid rgb(163, 230, 53);
+  border-radius: 5px;
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+  
+  
+}
+.retour{
+  height: 20px;
+  background-color: #013a63;
+  color: rgb(163, 230, 53);
+  border: 1px solid rgb(163, 230, 53);
+  border-radius: 5px;
+}
+.activation{
+  background-color: #013a63;
+  color: rgb(163, 230, 53);
+  border: 1px solid rgb(163, 230, 53);
 }
