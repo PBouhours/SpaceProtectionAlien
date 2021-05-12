@@ -55,54 +55,59 @@
 }
 .link-btn button {
   margin-left: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .formulaire {
   display: none;
-  padding: 40px;
-  background-color: aliceblue;
+  padding: 30px 60px;
+  background-color: #fff1e6;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
 }
 .ContactForm {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  width: 215px;
 }
-.ContactForm input{
+.ContactForm input {
   margin-bottom: 10px;
   background-color: #013a63;
   color: rgb(163, 230, 53);
   border: 1px solid rgb(163, 230, 53);
   border-radius: 5px;
+  padding: 10px;
+  width: 190px;
 }
 .active {
   display: block;
 }
-.ContactForm .valide{
-  width: 100px; 
+.ContactForm .valide {
+  width: 100px;
   background-color: #013a63;
   color: rgb(163, 230, 53);
   border: 1px solid rgb(163, 230, 53);
   border-radius: 5px;
+  margin: 10px 0;
 }
-.btn{
+.btn {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column-reverse;
+  align-items: center;
   width: 100%;
   margin-bottom: 10px;
-  
-  
 }
-.retour{
+.retour {
   height: 20px;
   background-color: #013a63;
   color: rgb(163, 230, 53);
   border: 1px solid rgb(163, 230, 53);
   border-radius: 5px;
 }
-.activation{
+.activation {
   background-color: #013a63;
   color: rgb(163, 230, 53);
   border: 1px solid rgb(163, 230, 53);
