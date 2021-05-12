@@ -42,7 +42,7 @@ function CharacterDetails(props) {
         </div>
       </div>
       <Link to='/'>Retour</Link>
-      <button type='button' onClick={() => setActive('active')}>
+      <button className="activation" type='button' onClick={() => setActive('active')}>
         Valider l'adoption
       </button>
       <div className={`formulaire ${active}`}>
@@ -50,7 +50,10 @@ function CharacterDetails(props) {
           <input type='text' className='name' placeholder='Nom' />
           <input type='text' className='prenom' placeholder='Prénom' />
           <input type='mail' className='email' placeholder='Email' />
-          <button type='button'>Je veux cet Alien </button>
+            <div className='btn'>
+            <button className='retour' type='button'onClick={()=> setActive('')}>retour</button>
+            <button className='valide' type='button'>Je veux cet Alien </button>
+            </div>
         </form>
       </div>
     </div>
