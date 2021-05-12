@@ -82,10 +82,7 @@ function CharacterDetails(props) {
                 type='button'
                 onClick={() => setActive('')}
               >
-                retour
-              </button>
-              <button className='valide' type='button'>
-                Je veux cet Alien{' '}
+                Je veux cet Alien
               </button>
             </div>
           </form>
