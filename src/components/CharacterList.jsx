@@ -66,7 +66,9 @@ export default function CharacterList({
   return (
     <>
       <h3 className='title-list'>
-        Adoptez votre nouvel Alien ou tout autre espèce...
+        Depuis des millènaires la SPA se bat pour sauver des aliens laissés à
+        l'abandon. Aidez nous et adoptez votre nouvel Alien ou tout autre
+        espèce...
       </h3>
       <div className='boxDropDown'>
         <div className='drop-group'>
