@@ -151,7 +151,9 @@ function Propose() {
                         />
                       </div>
                       <Link to={`/characters/${id}`}>
-                        <button type='button'>Adoptez-le !</button>
+                        <button type='button' class='buttonform'>
+                          Adoptez-le !
+                        </button>
                       </Link>
                     </div>
                   </div>
